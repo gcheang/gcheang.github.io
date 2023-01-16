@@ -1,0 +1,193 @@
+/* variables */
+:root {
+    --theme: dark;
+    --background-color: black;
+    
+    --font-family:Poppins;
+    --color: yellow;
+    
+    --accent-color: white;
+    --accent-color2: #3297FD;
+}
+
+/* basic setup */
+* {
+    box-sizing: border-box;
+    
+    font-family: var(--font-family);
+    color: var(--color);
+}
+
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    
+    top: 0;
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+
+#Header {
+    display: flex;
+    
+    border-bottom: .5vw solid var(--color);
+    background-color: var(--background-color);
+    
+    height:100%;
+    width:100%;
+    
+    overflow: hidden;
+    user-select:none;
+}
+
+#Logo {
+    display: flex;
+    
+    margin: 1rem;
+    
+    min-height: 50px;
+    width: 25%;
+}
+
+#Navbar {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: 0px 3rem;
+    
+    z-index: 1;
+    
+    margin-right: 1rem;
+    
+    background-color: none;    
+    
+    width: 75%;
+}
+
+#Menu {
+    margin: 1rem 0 1rem auto;
+    
+    height: 50px;
+    width: 50px;
+}
+
+.nav-item {
+    display: none;
+    
+    margin: 1rem 0;
+    
+    font-size: max(4vw,30px);
+}
+
+.nav-item--col {
+    display: block;
+    
+    margin: auto 1rem 1rem auto;
+}
+
+#ThemeButton {
+    position: fixed;
+    right: 2vw;
+    bottom: 2vw;
+    z-index: 1;
+    
+    border-radius: 50%;
+    background-color: var(--background-color);
+    
+    padding: 1vw;
+    
+    height: 5vw;
+    width: 5vw;
+}
+
+#Content {
+    display: flex;
+    flex-direction: column;
+    
+    width: 100%;
+}
+
+.card {
+    margin: 0;
+    
+    padding: max(10vw,100px) 5vw 1rem;
+}
+
+#Footer {
+    display: flex;
+    
+    padding-top: 5vw;
+    padding-bottom: 10vw;
+    background-color: var(--color);
+}
+
+.footer-item {
+    margin: auto;
+    padding: 1rem;
+}
+
+.font--logo {
+    font-size: max(4vw,30px);
+    font-weight: bold;
+}
+
+.font--accent {
+    color: var(--accent-color);
+}
+
+.font--accent2 {
+    background-color: var(--accent-color2);
+    color: white;
+}
+
+.font--footer {
+    color: var(--background-color);
+}
+
+a.font--footer {
+    color: var(--accent-color2);
+}
+
+a {
+    text-decoration: none;
+}
+
+h1 {
+    font-size: max(4vw,25px);
+}
+
+ul, p {
+    font-size: max(2vw,15px);
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+.easter-egg {
+    background: none;
+    border: none;
+}
+
+.easter-egg__toggle {
+    margin: 0;
+}
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .animate-float {transition: margin-top 0.3s ease-in-out;}
+    .animate-float:hover {margin-top: -1px;}
+    
+    #Navbar {flex-direction: row;}
+    #Menu {display: none;}
+    .nav-item {
+        display: block;
+        
+        margin: 1rem 0;
+        
+        font-size: max(4vw,30px);
+    }
+}

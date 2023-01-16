@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!-- title and favicon -->
+        <title>gcheang.github.io</title>
+        <link type="image/png" sizes="32x32" rel="icon" href="images/icons8-sun-32.png">
+        
+        <!-- basic setup -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <!-- stylesheet -->
+        <link rel="stylesheet" href="styles/style.css">
+        
+        <!-- fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+        
+        <!-- scripts -->
+        <script src="scripts/main.js"></script>
+    </head>
+
+    <body onload=onStart()>
+        <!-- header -->
+        <div id="Header" class="sticky">
+            <!-- logo -->
+            <div id="Logo">
+                <a href="#" class="font--logo">
+                    gcheang
+                </a>
+            </div>
+            
+            <!-- navbar -->
+            <div id="Navbar">
+                <!-- hamburger menu for smaller screens -->
+                <img id="Menu" src="images/icons8-menu-96-yellow.png" onclick=showMenu()></button>
+                
+                <a href="#About" class="nav-item animate-float" onclick=showMenu()>about</a>
+                <a href="#Projects" class="nav-item animate-float" onclick=showMenu()>projects</a>
+                <a href="#Resume" class="nav-item animate-float" onclick=showMenu()>resume</a>
+            </div>
+        </div>
+        
+        <img id="ThemeButton" src="images/icons8-do-not-disturb-ios-96.png" onclick=toggleTheme()></button>
+        
+        <!-- content -->
+        <div id="Content">
+            <div class="card">
+                <h1 class="font--accent">
+                    hi, i'm <button class="easter-egg" onclick=easterEgg()><h1 class="font--accent easter-egg__toggle font--accent2">gigi</h1></button><br>
+                    and this is my website!</br>
+                </h1>
+                <p>
+                    isn't it cool? ^-^
+                </p>
+            </div>
+            
+            <div class="card">
+                <h1 class="font--accent">
+                    feature list</br>
+                </h1>
+                <ul>
+                    <li>responsive web design: adjusts to your browser/device size</li>
+                        <ul>
+                            <li>hamburger menu for smaller screens</li>
+                        </ul>
+                    <li>a very cool header</li>
+                        <ul>
+                            <li>click header items to quickly jump to sections on the page</li>
+                            <li>hovering over makes them float!</li>
+                        </ul>
+                    <li>two themes! (light/dark)</li>
+                        <ul>
+                            <li>fetches your device's perferred theme</li>
+                            <li>floating theme switch button!</li>
+                        </ul>
+                    <li>made with 💕 in HTML/CSS</li>
+                </ul>
+            </div>
+            
+            <div id="About" class="card">
+                <h1 class="font--accent">
+                    about me
+                </h1>
+                <p>
+                    to be added...
+                </p>
+            </div>
+            
+            <div id="Projects" class="card">
+                <h1 class="font--accent">
+                    my projects
+                </h1>
+                <p>
+                    to be added...
+                </p>
+            </div>
+            
+            <div id="Resume" class="card" style="margin-bottom:100px">
+                <h1 class="font--accent">
+                    my resume
+                </h1>
+                <p>
+                    to be added...
+                </p>
+            </div>
+        </div>
+        
+        <div id="Footer">
+            <div class="footer-item">
+                <p class="font--footer" style="font-weight:bold">
+                    Credits
+                </p>
+            </div>
+            <div class="footer-item">
+                <p>
+                    <ul>
+                        <li class="font--footer"><a class="font--footer" target="_blank" href="https://icons8.com/icon/8113/menu">Menu</a> icon by <a class="font--footer" target="_blank" href="https://icons8.com">Icons8</a></li>
+                        <li class="font--footer"><a class="font--footer" target="_blank" href="https://icons8.com/icon/82718/sun">Sun</a> icon by <a class="font--footer" target="_blank" href="https://icons8.com">Icons8</a></li>
+                        <li class="font--footer"><a class="font--footer" target="_blank" href="https://icons8.com/icon/96226/do-not-disturb-ios">Do not Disturb iOS</a> icon by <a class="font--footer" target="_blank" href="https://icons8.com">Icons8</a></li>
+                        <li class="font--footer">Website design by <a target="_blank" class="font--footer" href="https://github.com/gcheang">me</a>
+                    </ul>
+                </p>
+            </div>
+        </div>
+    </body>
+</html>
