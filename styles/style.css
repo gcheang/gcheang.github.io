@@ -94,17 +94,17 @@ body {
 
 #ThemeButton {
     position: fixed;
-    right: 2vw;
-    bottom: 2vw;
+    right: 3vw;
+    bottom: 3vw;
     z-index: 1;
     
     border-radius: 50%;
     background-color: var(--background-color);
     
-    padding: 1vw;
+    padding: max(1vw,10px);
     
-    height: 5vw;
-    width: 5vw;
+    height: max(5vw,50px);
+    width: max(5vw,50px);
 }
 
 #Content {
