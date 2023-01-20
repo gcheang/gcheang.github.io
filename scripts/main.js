@@ -1,17 +1,21 @@
 function toggleTheme() {
-    const theme = getComputedStyle(document.body).getPropertyValue('--theme');
-    if (theme === ' dark') {
-        document.documentElement.style.setProperty('--theme', ' light');
-        document.documentElement.style.setProperty('--color', 'black');
-        document.documentElement.style.setProperty('--background-color', 'yellow');
-        document.documentElement.style.setProperty('--accent-color', '#CC0000'); /* light mode accent */
+    const theme = getComputedStyle(document.body).getPropertyValue('--theme').trim();
+    if (theme === 'dark') {
+        document.documentElement.setAttribute('style',
+        `--theme: light;
+        --color: black;
+        --background-color: yellow;
+        --accent-color: #CC0000;
+        `);
         document.getElementById("Menu").src="images/icons8-menu-96-black.png";
         document.getElementById("ThemeButton").src="images/icons8-sun-96.png";
     } else {
-        document.documentElement.style.setProperty('--theme', ' dark');
-        document.documentElement.style.setProperty('--color', 'yellow');
-        document.documentElement.style.setProperty('--background-color', 'black');
-        document.documentElement.style.setProperty('--accent-color', 'white');
+        document.documentElement.setAttribute('style',
+        `--theme: dark;
+        --color: yellow;
+        --background-color: black;
+        --accent-color: white;
+        `);
         document.getElementById("Menu").src="images/icons8-menu-96-yellow.png";
         document.getElementById("ThemeButton").src="images/icons8-do-not-disturb-ios-96.png";
     }
