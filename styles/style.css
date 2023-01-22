@@ -163,12 +163,21 @@ h1 {
     font-size: max(4vw,25px);
 }
 
-ul, p {
+ul, h2 {
+    margin: 0;
+    
     font-size: max(2vw,15px);
 }
 
 li {
-    margin-bottom: 5px;
+    margin-bottom: .5vw;
+    
+    font-size: max(1.5vw,10px);
+}
+
+p {
+    margin: 0;
+    font-size: max(1.5vw,10px);
 }
 
 .easter-egg {
