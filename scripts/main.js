@@ -4,9 +4,10 @@ function toggleTheme() {
         document.documentElement.setAttribute('style',
         `--theme: light;
         --color: black;
-        --background-color: yellow;
+        --background-color: white;
         --accent-color: #CC0000;
         `);
+        document.getElementById("Header").style.backgroundColor = '#FFF2CC';
         document.getElementById("Menu").src="images/icons8-menu-96-black.png";
         document.getElementById("ThemeButton").src="images/icons8-sun-96.png";
     } else {
@@ -16,6 +17,7 @@ function toggleTheme() {
         --background-color: black;
         --accent-color: white;
         `);
+        document.getElementById("Header").style.backgroundColor = 'var(--background-color)';
         document.getElementById("Menu").src="images/icons8-menu-96-yellow.png";
         document.getElementById("ThemeButton").src="images/icons8-do-not-disturb-ios-96.png";
     }

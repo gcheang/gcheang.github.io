@@ -37,6 +37,7 @@ body {
 #Header {
     display: flex;
     
+    border-top: .5vw solid var(--background-color);
     border-bottom: .5vw solid var(--color);
     background-color: var(--background-color);
     
@@ -123,8 +124,7 @@ body {
 #Footer {
     display: flex;
     
-    padding-top: 5vw;
-    padding-bottom: 10vw;
+    padding: 10vw 0;
     background-color: var(--color);
 }
 
