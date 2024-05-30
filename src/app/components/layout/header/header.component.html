@@ -1,0 +1,72 @@
+<p-sidebar
+  [(visible)]="sidebarVisible"
+  position="top"
+  [baseZIndex]="10000"
+  showCloseIcon="false"
+>
+  <div class="h-full w-full">
+    <ul class="flex justify-evenly text-neutral-50">
+      <li
+        class="decoration-wavy decoration-from-font hover:underline hover:decoration-red-500"
+        routerLink="/"
+        routerLinkActive="text-red-500"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Home
+      </li>
+      <li
+        class="decoration-wavy decoration-from-font hover:underline hover:decoration-red-500"
+        routerLink="/about"
+        routerLinkActive="text-red-500"
+      >
+        About
+      </li>
+      <li
+        class="decoration-wavy decoration-from-font hover:underline hover:decoration-red-500"
+        routerLink="/blog"
+        routerLinkActive="text-red-500"
+      >
+        Blog
+      </li>
+    </ul>
+  </div>
+</p-sidebar>
+
+<div
+  class="flex h-14 select-none items-center justify-between gap-2 bg-yellow-400 px-4 shadow-md"
+>
+  <div class="flex items-center">
+    <span class="ml-4 mt-1 text-lg font-bold hover:text-red-500" routerLink="/"
+      >gcheang</span
+    >
+  </div>
+  <div class="mt-1 flex grow justify-end">
+    <p-button id="sidebarBtn" class="block md:hidden" (onClick)="showSidebar()">
+      <i class="pi pi-bars text-2xl"></i>
+    </p-button>
+    <ul class="hidden max-w-md grow justify-evenly md:flex">
+      <li
+        class="decoration-wavy decoration-from-font hover:underline hover:decoration-red-500"
+        routerLink="/"
+        routerLinkActive="text-red-500"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        Home
+      </li>
+      <li
+        class="decoration-wavy decoration-from-font hover:underline hover:decoration-red-500"
+        routerLink="/about"
+        routerLinkActive="text-red-500"
+      >
+        About
+      </li>
+      <li
+        class="decoration-wavy decoration-from-font hover:underline hover:decoration-red-500"
+        routerLink="/blog"
+        routerLinkActive="text-red-500"
+      >
+        Blog
+      </li>
+    </ul>
+  </div>
+</div>
