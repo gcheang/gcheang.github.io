@@ -15,5 +15,6 @@
 
 :host ::ng-deep .p-sidebar {
   background-color: #262626;
+  border: none;
   height: 5rem;
 }

@@ -4,8 +4,8 @@
   [baseZIndex]="10000"
   showCloseIcon="false"
 >
-  <div class="h-full w-full">
-    <ul class="flex justify-evenly text-neutral-50">
+  <ng-template pTemplate="headless">
+    <ul class="mt-8 flex justify-evenly text-neutral-50">
       <li
         @fadeInAndOut
         class="decoration-wavy decoration-from-font hover:underline hover:decoration-red-500"
@@ -40,7 +40,7 @@
         Blog
       </li>
     </ul>
-  </div>
+  </ng-template>
 </p-sidebar>
 
 <div
