@@ -1,10 +1,18 @@
 import { Component } from '@angular/core';
+import { fadeInAndOut } from '../../animations/fadeInAndOut';
+import { ButtonModule } from 'primeng/button';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, ButtonModule],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
+  animations: [fadeInAndOut],
 })
-export class HomeComponent {}
+export class HomeComponent {
+  openLink(url: string) {
+    window.open(url, '_blank');
+  }
+}
