@@ -8,22 +8,22 @@ export const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
-    title: 'gcheang.github.io',
+    title: 'gcheang',
   },
   // {
   //   path: 'about',
   //   component: AboutComponent,
-  //   title: 'gcheang.github.io - About',
+  //   title: 'gcheang - About',
   // },
   {
     path: 'projects',
     component: ProjectsComponent,
-    title: 'gcheang.github.io - Projects',
+    title: 'gcheang - Projects',
   },
   {
     path: 'blog',
     component: BlogComponent,
-    title: 'gcheang.github.io - Blog',
+    title: 'gcheang - Blog',
   },
   {
     path: '**',
