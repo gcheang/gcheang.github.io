@@ -12,5 +12,7 @@
     cool things to write about!
   </p>
 
-  <app-blog-list></app-blog-list>
+  <app-blog-list
+    [@fadeInAndOut]="{ value: true, params: { delay: '600ms' } }"
+  ></app-blog-list>
 </div>

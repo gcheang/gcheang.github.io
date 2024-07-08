@@ -1,1 +1,7 @@
-<p>blog-list works!</p>
+@for (entry of directory; track entry) {
+  <a
+    class="text-red-500 underline hover:text-red-400"
+    routerLink="{{ entry.url }}"
+    >{{ entry.title }}</a
+  >
+}
