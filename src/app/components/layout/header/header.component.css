@@ -1,20 +1,26 @@
-.decoration-red-500 {
-  text-decoration-color: #ef4444;
+.decoration-accent-500 {
+  text-decoration-color: var(--accent-500);
 }
 
 :host ::ng-deep #sidebarBtn .p-button {
-  color: black;
+  color: var(--text-900);
   background-color: transparent;
   border-color: transparent;
 }
 
 :host ::ng-deep #sidebarBtn .p-button:focus {
-  color: #ef4444;
+  color: var(--accent-500);
   box-shadow: none !important;
 }
 
 :host ::ng-deep .p-sidebar {
-  background-color: #262626;
+  background-color: var(--text-900);
+  border: none;
+  height: 5rem;
+}
+
+html.dark :host ::ng-deep .p-sidebar {
+  background-color: var(--text-100);
   border: none;
   height: 5rem;
 }

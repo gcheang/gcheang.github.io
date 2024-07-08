@@ -1,6 +1,6 @@
 <div class="mx-6 my-2 grid place-items-center">
-  <h1 @fadeInAndOut class="mb-12 text-3xl">
-    Hi, I'm <span class="text-red-500">Gigi</span> and welcome to my website! 🐝
+  <h1 @fadeInAndOut class="mb-12 mt-4 text-3xl">
+    Hi, I'm <span class="text-accent-500">Gigi</span> and welcome to my website!
   </h1>
 
   <p
@@ -8,8 +8,8 @@
     class="mb-4 text-xl"
   >
     I am a fourth year computer science student at University of Toronto
-    <br />who is all about <span class="text-red-500">full stack</span> and
-    <span class="text-red-500">web development</span>!
+    <br />who is all about <span class="text-accent-500">full stack</span> and
+    <span class="text-accent-500">web development</span>!
   </p>
 
   <div class="mb-8 flex gap-2">
@@ -40,19 +40,19 @@
 
   <div
     [@fadeInAndOut]="{ value: true, params: { delay: '900ms' } }"
-    class="rounded-xl border-0 border-l-8 border-red-500 bg-yellow-100 p-4 shadow-md"
+    class="bg-secondary-100 border-accent-500 rounded-md border-0 border-l-8 p-4 shadow-lg"
   >
     <p>
-      I'm as busy as a bee right now, so my website is currently 🚧 under
+      I'm as busy as a bee 🐝 right now, so my website is currently 🚧 under
       construction 🚧
     </p>
     <p>I hope you like what I have built in the mean time 😊</p>
     <br />
 
-    <p class="text-red-500">
+    <p class="text-accent-500">
       Check out my first blog post:
       <b
-        class="cursor-pointer underline hover:text-red-400"
+        class="hover:text-accent-700 cursor-pointer underline"
         routerLink="blog/setting-up-build-publish-pipeline"
         >Setting up automatic build + publish pipeline for my Angular GitHub
         Pages website</b

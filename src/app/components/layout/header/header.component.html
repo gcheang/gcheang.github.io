@@ -1,96 +1,119 @@
 <p-sidebar
   [(visible)]="sidebarVisible"
   position="top"
-  [baseZIndex]="10000"
   showCloseIcon="false"
+  [modal]="true"
+  [dismissible]="true"
 >
   <ng-template pTemplate="headless">
-    <ul class="mt-8 flex justify-evenly text-neutral-50">
+    <ul class="text-text-100 dark:text-text-900 mt-8 flex justify-evenly">
       <li
-        @fadeInAndOut
-        class="decoration-wavy decoration-from-font hover:underline hover:decoration-red-500"
+        class="hover:decoration-accent-600 dark:hover:decoration-accent-400 decoration-wavy decoration-from-font hover:underline"
         routerLink="/"
-        routerLinkActive="text-red-500"
+        routerLinkActive="text-accent-600 dark:text-accent-400"
         [routerLinkActiveOptions]="{ exact: true }"
       >
         Home
       </li>
-      <!-- <li
-        @fadeInAndOut
-        class="decoration-wavy decoration-from-font hover:underline hover:decoration-red-500"
-        routerLink="/about"
-        routerLinkActive="text-red-500"
-      >
-        About
-      </li> -->
       <li
-        @fadeInAndOut
-        class="decoration-wavy decoration-from-font hover:underline hover:decoration-red-500"
+        class="hover:decoration-accent-600 dark:hover:decoration-accent-400 decoration-wavy decoration-from-font hover:underline"
         routerLink="/projects"
-        routerLinkActive="text-red-500"
+        routerLinkActive="text-accent-600 dark:text-accent-400"
       >
         Projects
       </li>
       <li
-        @fadeInAndOut
-        class="decoration-wavy decoration-from-font hover:underline hover:decoration-red-500"
+        class="hover:decoration-accent-600 dark:hover:decoration-accent-400 decoration-wavy decoration-from-font hover:underline"
         routerLink="/blog"
-        routerLinkActive="text-red-500"
+        routerLinkActive="text-accent-600 dark:text-accent-400"
       >
         Blog
+      </li>
+      <li (click)="toggleDarkMode(!darkMode)">
+        <i
+          *ngIf="!darkMode"
+          class="pi pi-moon text-text-100 dark:text-text-900 hover:text-accent-600 dark:hover:text-accent-400"
+        ></i>
+        <i
+          *ngIf="darkMode"
+          class="pi pi-sun text-text-100 dark:text-text-900 hover:text-accent-600 dark:hover:text-accent-400"
+        ></i>
       </li>
     </ul>
   </ng-template>
 </p-sidebar>
 
 <div
-  class="flex h-14 select-none items-center justify-between gap-2 bg-yellow-400 px-4 shadow-md"
+  class="bg-primary-400 text-text-900 dark:text-text-100 flex h-14 select-none items-center justify-between gap-2 px-4 shadow-md"
 >
   <div class="flex items-center">
     <span
       @fadeInAndOut
-      class="ml-4 mt-1 text-lg font-bold hover:text-red-500"
+      class="hover:text-accent-600 dark:hover:text-accent-400 ml-4 mt-1 text-lg font-bold"
       routerLink="/"
       >gcheang</span
     >
   </div>
   <div class="mt-1 flex grow justify-end">
-    <p-button id="sidebarBtn" class="block md:hidden" (onClick)="showSidebar()">
-      <i class="pi pi-bars text-2xl"></i>
+    <p-button
+      [rounded]="true"
+      id="sidebarBtn"
+      class="block md:hidden"
+      (onClick)="showSidebar()"
+    >
+      <i
+        class="pi pi-bars text-text-900 dark:text-text-100 hover:text-accent-600 dark:hover:text-accent-400 text-2xl"
+      ></i>
     </p-button>
-    <ul class="hidden max-w-md grow justify-evenly md:flex">
+    <ul class="hidden max-w-md grow items-center justify-evenly md:flex">
       <li
         @fadeInAndOut
-        class="decoration-wavy decoration-from-font hover:underline hover:decoration-red-500"
+        class="hover:decoration-accent-600 dark:hover:decoration-accent-400 decoration-wavy decoration-from-font hover:underline"
         routerLink="/"
-        routerLinkActive="text-red-500"
+        routerLinkActive="text-accent-600 dark:text-accent-400"
         [routerLinkActiveOptions]="{ exact: true }"
       >
         Home
       </li>
-      <!-- <li
-        @fadeInAndOut
-        class="decoration-wavy decoration-from-font hover:underline hover:decoration-red-500"
-        routerLink="/about"
-        routerLinkActive="text-red-500"
-      >
-        About
-      </li> -->
       <li
         @fadeInAndOut
-        class="decoration-wavy decoration-from-font hover:underline hover:decoration-red-500"
+        class="hover:decoration-accent-600 dark:hover:decoration-accent-400 decoration-wavy decoration-from-font hover:underline"
         routerLink="/projects"
-        routerLinkActive="text-red-500"
+        routerLinkActive="text-accent-600 dark:text-accent-400"
       >
         Projects
       </li>
       <li
         @fadeInAndOut
-        class="decoration-wavy decoration-from-font hover:underline hover:decoration-red-500"
+        class="hover:decoration-accent-600 dark:hover:decoration-accent-400 decoration-wavy decoration-from-font hover:underline"
         routerLink="/blog"
-        routerLinkActive="text-red-500"
+        routerLinkActive="text-accent-600 dark:text-accent-400"
       >
         Blog
+      </li>
+      <li>
+        <p-button
+          [rounded]="true"
+          class="mt-1"
+          *ngIf="darkMode"
+          [text]="true"
+          (click)="toggleDarkMode(false)"
+        >
+          <i
+            class="pi pi-moon text-text-900 dark:text-text-100 hover:text-accent-600 dark:hover:text-accent-400"
+          ></i>
+        </p-button>
+        <p-button
+          [rounded]="true"
+          class="mt-1"
+          *ngIf="!darkMode"
+          [text]="true"
+          (click)="toggleDarkMode(true)"
+        >
+          <i
+            class="pi pi-sun text-text-900 dark:text-text-100 hover:text-accent-600 dark:hover:text-accent-400"
+          ></i>
+        </p-button>
       </li>
     </ul>
   </div>

@@ -1,10 +1,87 @@
-@layer tailwind-base, primeng, tailwind-utilities;
+@layer tw-base, tw-components, primeng, tw-utilities;
 
-@layer tailwind-base {
-  @tailwind base;
+@import "tailwindcss/base.css" layer(tw-base);
+@import "tailwindcss/components.css" layer(tw-components);
+@import "tailwindcss/utilities.css" layer(tw-utilities);
+
+@import "primeng/resources/themes/aura-light-amber/theme.css";
+@import "primeicons/primeicons.css";
+
+@import "theme.css";
+
+p {
+  text-wrap: pretty;
 }
 
-@layer tailwind-utilities {
-  @tailwind components;
-  @tailwind utilities;
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    transition-property: background-color;
+    transition-duration: 0.5s;
+    transition-timing-function: linear;
+  }
+}
+
+html,
+body {
+  max-height: 100dvh;
+  background-color: var(--background-900);
+  color: var(--text-800);
+}
+
+html.dark {
+  caret-color: white;
+}
+
+::selection {
+  background: var(--primary-500);
+  color: var(--text-900);
+}
+
+html.dark ::selection {
+  color: var(--text-100);
+}
+
+/* Fix issue with overlay */
+.p-component-overlay {
+  position: absolute;
+  inset: 0;
+  opacity: 1;
+  transition: opacity 1s linear;
+}
+
+.p-button {
+  background-color: var(--primary-400);
+  border-color: var(--primary-400);
+  color: var(--text-900);
+}
+
+html.dark .p-button {
+  color: var(--text-100);
+}
+
+.p-button-danger {
+  background-color: var(--accent-500);
+  border-color: var(--accent-500);
+  color: var(--text-100);
+}
+
+html.dark .p-button-danger {
+  color: var(--text-900);
+}
+
+a {
+  color: var(--accent-500);
+}
+
+a:hover {
+  color: var(--accent-700);
+}
+
+.p-scrolltop {
+  scale: 75%;
+  background-color: color-mix(in srgb, var(--background-900), transparent 50%);
+}
+
+.p-scrolltop > span {
+  color: var(--text-100);
 }

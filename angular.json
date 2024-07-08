@@ -50,10 +50,7 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css",
-              "primeng/resources/primeng.css",
-              "primeng/resources/themes/aura-light-amber/theme.css",
-              "primeicons/primeicons.css"
+              "src/styles.css"
             ],
             "scripts": []
           },

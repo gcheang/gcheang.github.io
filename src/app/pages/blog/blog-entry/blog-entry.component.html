@@ -1,10 +1,10 @@
 <div *ngIf="id" class="mx-8 my-6">
-  <div>
+  <div class="italic">
     {{ metadata.publishDate?.toLocaleDateString(undefined, formatOptions) }}
     <p-button label="Go back" routerLink="/blog" class="float-right"></p-button>
   </div>
   <markdown src="assets/blog-entries/{{ id }}.md"></markdown>
-  <div class="mt-4 text-right">
+  <div class="mt-4 text-right italic">
     Last edited:
     {{ metadata.lastEditDate?.toLocaleDateString(undefined, formatOptions) }}
   </div>
