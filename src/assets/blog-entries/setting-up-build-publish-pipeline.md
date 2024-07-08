@@ -200,3 +200,5 @@ Like with all things coding, the best way to figure it out is to run it.
 ## See the final config file here:
 
 https://github.com/gcheang/gcheang.github.io/blob/main/.github/workflows/pipeline.yml
+
+Special thanks to https://jaydenpb.net/ for help with proofreading and inspiring me to make a blog!
