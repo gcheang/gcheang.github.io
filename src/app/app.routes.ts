@@ -17,11 +17,11 @@ export const routes: Routes = [
   //   component: AboutComponent,
   //   title: 'gcheang - About',
   // },
-  {
-    path: 'projects',
-    component: ProjectsComponent,
-    title: 'gcheang - Projects',
-  },
+  // {
+  //   path: 'projects',
+  //   component: ProjectsComponent,
+  //   title: 'gcheang - Projects',
+  // },
   {
     path: 'blog/error/404',
     component: Blog404Component,

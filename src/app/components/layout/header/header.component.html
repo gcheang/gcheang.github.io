@@ -6,24 +6,24 @@
   [dismissible]="true"
 >
   <ng-template pTemplate="headless">
-    <ul class="text-text-100 dark:text-text-900 mt-8 flex justify-evenly">
+    <ul class="mt-8 flex justify-evenly text-text-100 dark:text-text-900">
       <li
-        class="hover:decoration-accent-600 dark:hover:decoration-accent-400 decoration-wavy decoration-from-font hover:underline"
+        class="decoration-wavy decoration-from-font hover:underline hover:decoration-accent-600 dark:hover:decoration-accent-400"
         routerLink="/"
         routerLinkActive="text-accent-600 dark:text-accent-400"
         [routerLinkActiveOptions]="{ exact: true }"
       >
         Home
       </li>
-      <li
+      <!-- <li
         class="hover:decoration-accent-600 dark:hover:decoration-accent-400 decoration-wavy decoration-from-font hover:underline"
         routerLink="/projects"
         routerLinkActive="text-accent-600 dark:text-accent-400"
       >
         Projects
-      </li>
+      </li> -->
       <li
-        class="hover:decoration-accent-600 dark:hover:decoration-accent-400 decoration-wavy decoration-from-font hover:underline"
+        class="decoration-wavy decoration-from-font hover:underline hover:decoration-accent-600 dark:hover:decoration-accent-400"
         routerLink="/blog"
         routerLinkActive="text-accent-600 dark:text-accent-400"
       >
@@ -32,11 +32,11 @@
       <li (click)="toggleDarkMode(!darkMode)">
         <i
           *ngIf="!darkMode"
-          class="pi pi-moon text-text-100 dark:text-text-900 hover:text-accent-600 dark:hover:text-accent-400"
+          class="pi pi-moon text-text-100 hover:text-accent-600 dark:text-text-900 dark:hover:text-accent-400"
         ></i>
         <i
           *ngIf="darkMode"
-          class="pi pi-sun text-text-100 dark:text-text-900 hover:text-accent-600 dark:hover:text-accent-400"
+          class="pi pi-sun text-text-100 hover:text-accent-600 dark:text-text-900 dark:hover:text-accent-400"
         ></i>
       </li>
     </ul>
@@ -44,12 +44,12 @@
 </p-sidebar>
 
 <div
-  class="bg-primary-400 text-text-900 dark:text-text-100 flex h-14 select-none items-center justify-between gap-2 px-4 shadow-md"
+  class="flex h-14 select-none items-center justify-between gap-2 bg-primary-400 px-4 text-text-900 shadow-md dark:text-text-100"
 >
   <div class="flex items-center">
     <span
       @fadeInAndOut
-      class="hover:text-accent-600 dark:hover:text-accent-400 ml-4 mt-1 text-lg font-bold"
+      class="ml-4 mt-1 text-lg font-bold hover:text-accent-600 dark:hover:text-accent-400"
       routerLink="/"
       >gcheang</span
     >
@@ -62,30 +62,30 @@
       (onClick)="showSidebar()"
     >
       <i
-        class="pi pi-bars text-text-900 dark:text-text-100 hover:text-accent-600 dark:hover:text-accent-400 text-2xl"
+        class="pi pi-bars text-2xl text-text-900 hover:text-accent-600 dark:text-text-100 dark:hover:text-accent-400"
       ></i>
     </p-button>
     <ul class="hidden max-w-md grow items-center justify-evenly md:flex">
       <li
         @fadeInAndOut
-        class="hover:decoration-accent-600 dark:hover:decoration-accent-400 decoration-wavy decoration-from-font hover:underline"
+        class="decoration-wavy decoration-from-font hover:underline hover:decoration-accent-600 dark:hover:decoration-accent-400"
         routerLink="/"
         routerLinkActive="text-accent-600 dark:text-accent-400"
         [routerLinkActiveOptions]="{ exact: true }"
       >
         Home
       </li>
-      <li
+      <!-- <li
         @fadeInAndOut
         class="hover:decoration-accent-600 dark:hover:decoration-accent-400 decoration-wavy decoration-from-font hover:underline"
         routerLink="/projects"
         routerLinkActive="text-accent-600 dark:text-accent-400"
       >
         Projects
-      </li>
+      </li> -->
       <li
         @fadeInAndOut
-        class="hover:decoration-accent-600 dark:hover:decoration-accent-400 decoration-wavy decoration-from-font hover:underline"
+        class="decoration-wavy decoration-from-font hover:underline hover:decoration-accent-600 dark:hover:decoration-accent-400"
         routerLink="/blog"
         routerLinkActive="text-accent-600 dark:text-accent-400"
       >
@@ -100,7 +100,7 @@
           (click)="toggleDarkMode(false)"
         >
           <i
-            class="pi pi-moon text-text-900 dark:text-text-100 hover:text-accent-600 dark:hover:text-accent-400"
+            class="pi pi-moon text-text-900 hover:text-accent-600 dark:text-text-100 dark:hover:text-accent-400"
           ></i>
         </p-button>
         <p-button
@@ -111,7 +111,7 @@
           (click)="toggleDarkMode(true)"
         >
           <i
-            class="pi pi-sun text-text-900 dark:text-text-100 hover:text-accent-600 dark:hover:text-accent-400"
+            class="pi pi-sun text-text-900 hover:text-accent-600 dark:text-text-100 dark:hover:text-accent-400"
           ></i>
         </p-button>
       </li>
