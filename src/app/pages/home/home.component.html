@@ -20,7 +20,7 @@
       label="My Resume"
       icon="pi pi-file"
       class="whitespace-nowrap"
-      (click)="openLink('assets/gigi-cheang_resume_may-2024.pdf')"
+      (click)="openLink('assets/gigi-cheang_resume_sept-2024.pdf')"
     ></p-button>
     <p-button
       [@fadeInAndOut]="{ value: true, params: { delay: '700ms' } }"
@@ -40,7 +40,7 @@
 
   <div
     [@fadeInAndOut]="{ value: true, params: { delay: '900ms' } }"
-    class="bg-secondary-100 border-accent-500 rounded-md border-0 border-l-8 p-4 shadow-lg"
+    class="rounded-md border-0 border-l-8 border-accent-500 bg-secondary-100 p-4 shadow-lg"
   >
     <p>
       I'm as busy as a bee 🐝 right now, so my website is currently 🚧 under
@@ -52,7 +52,7 @@
     <p class="text-accent-500">
       Check out my first blog post:
       <b
-        class="hover:text-accent-700 cursor-pointer underline"
+        class="cursor-pointer underline hover:text-accent-700"
         routerLink="blog/setting-up-build-publish-pipeline"
         >Setting up automatic build + publish pipeline for my Angular GitHub
         Pages website</b
